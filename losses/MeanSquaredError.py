@@ -14,5 +14,5 @@ class MeanSquaredError:
         self.loss = 0
         for i in range(data_count):
             self.loss += (self.model(data[i][:-1], params) - data[i][-1])**2
-        self.loss = self.loss/data_count
+        self.loss *= 1/data_count
         return self.loss
